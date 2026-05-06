@@ -22,6 +22,7 @@ cd <YOUR_REPO_NAME>
 ```
 
 ### 2. Make your changes
+*   Create a new file called `hello.txt`
 *   Open the file `hello.txt` in your text editor (VS Code, Notepad, etc.).
 *   Type your **Full Name** and **GitHub Username**.
 *   **Save the file.**
