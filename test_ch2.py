@@ -34,6 +34,7 @@ def step5(): # 20 Points
     state['A'] = 'Clean'
     state['B'] = 'Clean'
     ModelBasedVacuumAgent(('B', 'Clean')) # Trigger the Wait
+    ModelBasedVacuumAgent(('B', 'Clean'))
     assert state['A'] is None, "Did not reset Room A after Wait"
     print("Step 5 Passed")
 
