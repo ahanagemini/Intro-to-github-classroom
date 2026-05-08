@@ -9,7 +9,7 @@ def test_conversion(): # 50 Points
     try:
         df = pd.read_csv('sensor_data.csv')
         # We check if they at least return the right type and shape
-        X, z = calculate_neuron_output('sensor_data.csv')
+        X, z = calculate_neuron_output('sensor.csv')
         assert isinstance(X, np.ndarray), "Result must be a NumPy array."
         assert X.shape == (3,3), f"Expected shape (3,3), got {actual.shape}"
         print("✅ Step 1 Passed: Data loaded and converted correctly.")
