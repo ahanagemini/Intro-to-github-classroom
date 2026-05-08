@@ -16,5 +16,7 @@ def calculate_neuron_output(csv_file):
     # Hint: Use the  .dot() method for multiplication
     z = None 
     
+    # 5. TODO: Apply Step Activation
+    # Return 1 if z > 0, else 0
     
     return X, z
