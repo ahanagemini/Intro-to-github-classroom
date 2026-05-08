@@ -1,7 +1,7 @@
 import sys
 import numpy as np
 import pandas as pd
-from neuron_lab import calculate_neuron_output
+from lab_neuron import calculate_neuron_output
 
 # Helper to capture the internal X matrix from the student's function
 # This assumes the function is structured as we designed.
