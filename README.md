@@ -11,6 +11,7 @@ This lab covers the implementation of **Uninformed Search** strategies based on 
 
 ---
 
+
 ### 📂 File Structure
 * `search_lab.py`: Your starter code containing the map data and function templates.
 * `test_lab6.py`: The autograder script used to verify your solutions.
