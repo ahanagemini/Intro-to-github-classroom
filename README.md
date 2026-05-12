@@ -1,31 +1,15 @@
-# Assignment 5: Informed Search (Greedy & A*)
+# Lab: Recursive Minimax (No Pruning)
 
-This assignment covers **Informed Search** strategies. You will use a heuristic ($h$), which represents the straight-line distance to the goal, to make the search more efficient.
+## The Scenario
+You are a treasure hunter in a two-level game tree:
+1. **Level 0 (MAX):** You are at the entrance. You choose which **Cave** to enter.
+2. **Level 1 (MIN):** Each cave has a **Guardian**. The guardian chooses which **Chest** you get.
+3. **Level 2 (Leaves):** The actual gold values inside the chests.
 
----
+## The Goal
+Implement the recursive `max_value` and `min_value` functions to find the best possible value you can guarantee, assuming the guardian always picks the smallest value chest in their cave.
 
-### 🛠️ Tasks
-
-#### Step 1: Greedy Search (50 Points)
-Implement `greedy_search`.
-* **Strategy**: Priority = $h(n)$.
-* **Goal**: Expand the node that appears closest to the goal.
-
-#### Step 2: A* Search (50 Points)
-Implement `astar_search`.
-* **Strategy**: Priority = $g(n) + h(n)$.
-* **Goal**: Find the optimal path using both actual cost and the heuristic.
-
----
-
-### 🧪 How to Test Locally
-
-**To test Greedy (Step 1):**
-```bash
-python test_assignment6.py 1
-```
-
-**To test A* (Step 2):**
-```bash
-python test_assignment6.py 2
-```
+## Tree Structure Example
+A tree represented as `[[3, 5], [2, 100]]` means:
+- **Cave 1** contains chests with values **3** and **5**.
+- **Cave 2** contains chests with values **2** and **100**.
