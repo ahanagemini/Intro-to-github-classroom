@@ -1,15 +1,13 @@
-# Lab: Recursive Minimax (No Pruning)
-
-## The Scenario
-You are a treasure hunter in a two-level game tree:
-1. **Level 0 (MAX):** You are at the entrance. You choose which **Cave** to enter.
-2. **Level 1 (MIN):** Each cave has a **Guardian**. The guardian chooses which **Chest** you get.
-3. **Level 2 (Leaves):** The actual gold values inside the chests.
+# Assignment: Alpha-Beta Pruning Optimization
 
 ## The Goal
-Implement the recursive `max_value` and `min_value` functions to find the best possible value you can guarantee, assuming the guardian always picks the smallest value chest in their cave.
+Optimize your working Minimax code by adding `alpha` and `beta` boundaries. The goal is to dynamically cut off branches of the tree as soon as you mathematically prove they cannot affect the final outcome. 
 
-## Tree Structure Example
-A tree represented as `[[3, 5], [2, 100]]` means:
-- **Cave 1** contains chests with values **3** and **5**.
-- **Cave 2** contains chests with values **2** and **100**.
+## Grading (100 Points Total)
+Your code must pass two separate test criteria:
+1. **Test Case 1 (50 Points):** Basic pruning detection. 
+   - Command: `python test_alphabeta.py 1`
+2. **Test Case 2 (50 Points):** Multi-cave pruning and edge case evaluation.
+   - Command: `python test_alphabeta.py 2`
+
+**Note:** Unlike the Minimax lab, these test cases will fail if your `visited` node list contains nodes that should have been pruned!
