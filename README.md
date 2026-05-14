@@ -1,28 +1,32 @@
-# Lab Module: Analytical Gradients & SymPy Symbolic Optimization
+# Homework Assignment: Building the Multi-Variable Optimization Loop
 
-In this lab, you will manually implement the gradients of an AI loss function and verify your work programmatically using symbolic algebra.
+In this assignment, you will build the optimization loop that drives model learning, explore how step size changes based on surface slope, and analyze why certain hyperparameter configurations fail.
 
-## 📐 The Loss Landscape
-We are optimizing the following multi-variable polynomial surface:
-$$L(w_1, w_2) = w_1^2 + 3w_2^2$$
+## 🛠️ Assignment Setup & Tasks
 
-## 🛠️ Tasks
+### Step 1: Copy Your Lab Code
+Copy your verified `lab7.py` file from your completed lab workspace directly into this assignment folder directory. Your homework code requires your lab functions to calculate analytical partial derivatives.
 
-### Task 1: Manual Calculus Coding
-Open `lab_gradient_engine.py`. Implement your hand-derived equations inside `compute_gradient_manual(w1, w2)` ($\frac{\partial L}{\partial w_1} = 2w_1$, $\frac{\partial L}{\partial w_2} = 6w_2$).
+### Step 2: Implement the Parameter Optimization Step
+Open `calculus_assignment.py` and locate the `gradient_descent(...)` loop block. Replace the placeholder comment with the multi-variable vector update rule covered on **Slide 30**:
+$$w \leftarrow w - \alpha \nabla L(w_1, w_2)$$
 
-### Task 2: Automated SymPy Code
-Complete `compute_gradient_and_critical_with_sympy()`. Use `sp.symbols`, `sp.diff`, and `sp.solve` to programmatically extract the derivatives and locate the system's stationary bounds.
-
-## 🧪 Running Terminal Tests
-Verify your code using your terminal command line arguments:
+### Step 3: Run Visualizations
+Compile your hyperparameter visual profiles to verify your paths:
 ```bash
-# Test manual gradient at origin
-python test_lab.py 1
-
-# Test manual gradient in quadrants
-python test_lab.py 2
-
-# Test SymPy derivation and solver execution
-python test_lab.py 3
+python visualization_tool.py
 ```
+Open the generated `my_optimization_profiles.png` file to check your paths.
+
+## 🧪 Submission Verification Tests
+Run the test runner using command-line system arguments to check your implementation:
+```bash
+# Verify stable convergence path trends
+python test_homework.py 1
+
+# Verify that step sizes scale down as the slope flattens
+python test_homework.py 2
+```
+
+## 📝 Analytical Report Deliverable
+Open `Analysis.md` and complete the engineering review prompts comparing the optimization paths before submitting.
