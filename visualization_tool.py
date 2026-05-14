@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from lab_gradient_engine import loss_function
+from lab7 import loss_function
 from calculus_assignment import gradient_descent
 
 def generate_assignment_plots():
