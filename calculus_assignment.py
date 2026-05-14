@@ -1,6 +1,6 @@
 import numpy as np
 # Import the validated functions developed during the in-class lab component
-from lab_gradient_engine import loss_function, compute_gradient_manual
+from lab7 import loss_function, compute_gradient_manual
 
 def gradient_descent(start_w1, start_w2, alpha, num_iterations):
     """
