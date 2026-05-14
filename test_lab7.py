@@ -15,7 +15,7 @@ def test_1_minimum():
 def test_2_quadrants():
     print("▶ Running Test Case 2: Checking manual gradient value scaling...")
     grad_pos = compute_gradient_manual(2.0, 1.0)
-    grad_neg = compute_gradient(-3.0, -2.0)
+    grad_neg = compute_gradient_manual(-3.0, -2.0)
     
     if np.allclose(grad_pos, [4.0, 6.0]) and np.allclose(grad_neg, [-6.0, -12.0]):
         print("✅ TEST 2 PASSED: Manual quadrant scaling evaluations are accurate.")
