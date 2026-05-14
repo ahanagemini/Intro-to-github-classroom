@@ -22,10 +22,10 @@ Open the generated `my_optimization_profiles.png` file to check your paths.
 Run the test runner using command-line system arguments to check your implementation:
 ```bash
 # Verify stable convergence path trends
-python test_homework.py 1
+python test_assignment7.py 1
 
 # Verify that step sizes scale down as the slope flattens
-python test_homework.py 2
+python test_assignment7.py 2
 ```
 
 ## 📝 Analytical Report Deliverable
