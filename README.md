@@ -1,13 +1,28 @@
-# Assignment: Alpha-Beta Pruning Optimization
+# Lab Module: Analytical Gradients & SymPy Symbolic Optimization
 
-## The Goal
-Optimize your working Minimax code by adding `alpha` and `beta` boundaries. The goal is to dynamically cut off branches of the tree as soon as you mathematically prove they cannot affect the final outcome. 
+In this lab, you will manually implement the gradients of an AI loss function and verify your work programmatically using symbolic algebra.
 
-## Grading (100 Points Total)
-Your code must pass two separate test criteria:
-1. **Test Case 1 (50 Points):** Basic pruning detection. 
-   - Command: `python test_alphabeta.py 1`
-2. **Test Case 2 (50 Points):** Multi-cave pruning and edge case evaluation.
-   - Command: `python test_alphabeta.py 2`
+## 📐 The Loss Landscape
+We are optimizing the following multi-variable polynomial surface:
+$$L(w_1, w_2) = w_1^2 + 3w_2^2$$
 
-**Note:** Unlike the Minimax lab, these test cases will fail if your `visited` node list contains nodes that should have been pruned!
+## 🛠️ Tasks
+
+### Task 1: Manual Calculus Coding
+Open `lab_gradient_engine.py`. Implement your hand-derived equations inside `compute_gradient_manual(w1, w2)` ($\frac{\partial L}{\partial w_1} = 2w_1$, $\frac{\partial L}{\partial w_2} = 6w_2$).
+
+### Task 2: Automated SymPy Code
+Complete `compute_gradient_and_critical_with_sympy()`. Use `sp.symbols`, `sp.diff`, and `sp.solve` to programmatically extract the derivatives and locate the system's stationary bounds.
+
+## 🧪 Running Terminal Tests
+Verify your code using your terminal command line arguments:
+```bash
+# Test manual gradient at origin
+python test_lab.py 1
+
+# Test manual gradient in quadrants
+python test_lab.py 2
+
+# Test SymPy derivation and solver execution
+python test_lab.py 3
+```
