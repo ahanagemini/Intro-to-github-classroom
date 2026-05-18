@@ -25,10 +25,10 @@ def run_test_case_2():
     X_query = np.array([[1100.0]])
     
     pred_k1 = lab.knn_predict(X_train, y_train, X_query, k=1)
-    assert np.isclose(float(pred_k1), 400.0), f"Test Case 2 (k=1) Failed. Expected 400.0, got {pred_k1}"
+    assert np.isclose(float(pred_k1[0][0]), 400.0), f"Test Case 2 (k=1) Failed. Expected 400.0, got {pred_k1}"
     
     pred_k2 = lab.knn_predict(X_train, y_train, X_query, k=2)
-    assert np.isclose(float(pred_k2), 500.0), f"Test Case 2 (k=2) Failed. Expected 500.0, got {pred_k2}"
+    assert np.isclose(float(pred_k2[0][0]), 500.0), f"Test Case 2 (k=2) Failed. Expected 500.0, got {pred_k2}"
     print("[PASS] Test Case 2: k-NN predictions match neighborhood averages.")
 
 def run_test_case_3():
