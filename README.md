@@ -1,22 +1,19 @@
-# Assignment 8: Matrix Gradient Descent with Standalone Bias
+# Lab: Propositional Logic Inference using Forward Chaining
 
 ## Objectives
-* Implement Batch Gradient Descent using a feature weight matrix `w` and a standalone scalar bias `w0`.
-* Compute predictions using matrix multiplication (`@`) combined with the scalar bias.
-* Individually update parameters using the exact summation formulas from Slide 16.
-
-## Mathematical Formulas
-$$w_0 \leftarrow w_0 + \alpha_{w0} \sum_{j=1}^{N} (y_j - \hat{y}_j)$$
-$$w_1 \leftarrow w_1 + \alpha_{w} \sum_{j=1}^{N} (y_j - \hat{y}_j) \cdot x_j$$
+* Implement the exact pseudocode for the `PL-FC-Entails?` algorithm from Slide 29.
+* Trace Horn clause inference steps over the textbook Knowledge Base.
 
 ## Repository Structure
-* `gradient_descent_lab.py`: Student template file.
-* `test_gradient.py`: Custom command-line testing harness.
+* `forward_chaining_lab.py`: Student template file.
+* `test_lab.py`: Custom command-line testing harness with 3 distinct test choices.
 
 ## Instructions
-Execute the test harness with different arguments to verify individual portions:
+1. Open `forward_chaining_lab.py` and fill in the code blocks marked `## TODO`.
+2. Run your local test harness using explicit task IDs:
+
 ```bash
-python test_gradient.py 1  # Test Case 1: Matrix Prediction
-python test_gradient.py 2  # Test Case 2: Explicit Slide Update Rules
-python test_gradient.py 3  # Test Case 3: Optimization Convergence
+python test_lab.py 1  # Test Case 1: Base Initialization
+python test_lab.py 2  # Test Case 2: Agenda Processing Steps
+python test_lab.py 3  # Test Case 3: Complete Horn KB Entailment
 ```
