@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-import forward_chaining_lab as lab
+import lab9 as lab
 
 def get_lecture_kb():
     # Knowledge base representation matching Slide 28 structure:
@@ -56,7 +56,7 @@ if __name__ == "__main__":
         print("Usage: python test_lab.py [1, 2, or 3]")
         sys.exit(1)
         
-    test_case_id = sys.argv
+    test_case_id = sys.argv[1]
     if test_case_id == "1": run_test_case_1()
     elif test_case_id == "2": run_test_case_2()
     elif test_case_id == "3": run_test_case_3()
