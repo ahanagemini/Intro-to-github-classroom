@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-import classification_lab as lab
+import lab10 as lab
 
 def get_seismic_dataset():
     # Inspired by Slide 27: body wave magnitude (x1) and surface wave magnitude (x2)
@@ -55,7 +55,7 @@ if __name__ == "__main__":
         print("Usage: python test_lab.py [1, 2, 3, or 4]")
         sys.exit(1)
         
-    test_case_id = sys.argv
+    test_case_id = sys.argv[1]
     if test_case_id == "1": run_test_case_1()
     elif test_case_id == "2": run_test_case_2()
     elif test_case_id == "3": run_test_case_3()
